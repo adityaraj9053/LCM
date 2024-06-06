@@ -1,0 +1,36 @@
+//LCM Of Two Numbers
+
+import java.util.Scanner;
+
+public class Lcm {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 2 number");
+        int a = sc.nextInt();        
+        int b = sc.nextInt();
+
+        int result = Math.max(a, b);// storing max value between a and b in 
+        //variable "result".
+
+        while (true) {
+            if(result%a==0 && result%b==0){
+                break;
+
+//if number stored in result is divisible by both a and b then, "result" is
+// LCM. Ex- a=2, b=10. LCM = 10.so, break loop and print answer.
+
+            }else{
+                result++;
+                
+//if result is not the common multiple thyen increase it by 1. we increase it
+//from maximum number bcoz we can only get LCM from the multiple of largest 
+//number.
+            }
+        }
+        System.out.println("LCM: "+result);
+    }    
+}/*logic:
+   Multiple of 12 = 12, 24, 36, 48, 60 
+   Multiple of 16 = 16, 32, 48, 65
+   now, 1stcommon multiple of 12 and 16 is 48. so, it is its least common 
+   multiple. */
